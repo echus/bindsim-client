@@ -1,18 +1,18 @@
-.title {
-    font-size: 50px;
-}
-
-#params-nmr-1to2 {
-    display: none;
-}
-
 /* Bootstrap mods */
 .input-group-addon-width {
-    min-width: 120px;
+    min-width: 100px;
     text-align: left;
 }
 
-/* Convenience classes */
-.top-buffer { 
-    margin-top:50px; 
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.form-group {
+    width: 100%;
+}
+
+
+#params-nmr-1to2 {
+    display: none;
 }

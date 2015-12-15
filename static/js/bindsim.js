@@ -460,19 +460,22 @@ bindsim.sim_nmr_1to2 = {
             name: "H molefraction",
             type: "area",
             yAxis: bindsim.i.axis_molefrac,
-            color: bindsim.sim_nmr_1to2.i.color_mf_h
+            color: bindsim.sim_nmr_1to2.i.color_mf_h,
+            marker: {enabled: false}
             }, {
             id: "series-molefrac-hg",
             name: "HG molefraction",
             type: "area",
             yAxis: bindsim.i.axis_molefrac,
-            color: bindsim.sim_nmr_1to2.i.color_mf_hg
+            color: bindsim.sim_nmr_1to2.i.color_mf_hg,
+            marker: {enabled: false}
             }, {
             id: "series-molefrac-hg2",
             name: "HG2 molefraction",
             type: "area",
             yAxis: bindsim.i.axis_molefrac,
-            color: bindsim.sim_nmr_1to2.i.color_mf_hg2
+            color: bindsim.sim_nmr_1to2.i.color_mf_hg2,
+            marker: {enabled: false}
             }, {
             id: "series-isotherm",
             name: "Isotherm",
@@ -482,7 +485,8 @@ bindsim.sim_nmr_1to2 = {
                 valueSuffix: " (ppm or Hz)"
             },
             lineWidth: 2,
-            color: bindsim.sim_nmr_1to2.i.color_dd
+            color: bindsim.sim_nmr_1to2.i.color_dd,
+            marker: {enabled: false}
         }];
         
         // Call bindsim's global plot_setup with series parameters
