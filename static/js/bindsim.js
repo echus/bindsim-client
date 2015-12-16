@@ -1,3 +1,6 @@
+// TODO: This should all really be condensed into a single generalised function
+//       when I'm not feeling lazy
+
 var bindsim = {
     // Bindsim internal globals
     i: {
@@ -119,7 +122,7 @@ var bindsim = {
     //
     // Highcharts
     // 
-    plot_setup: function(s) {
+    plot_setup: function(ylabel, s) {
         /**
          * Initialise a Highcharts chart in container #bindsim.i.plot_id
          *
@@ -127,6 +130,11 @@ var bindsim = {
          *
          * @returns {Object} - Highcharts chart object
          */
+
+        // Default ylabel if none given
+        if (ylabel === undefined) {
+            ylabel = "\u0394\u03B4 (ppm or Hz)";
+        }
 
         var chart = new Highcharts.Chart({
             chart: {
@@ -149,7 +157,7 @@ var bindsim = {
             yAxis: [{ // Primary y axis
                 id: bindsim.i.axis_isotherm,
                 title: {
-                    text: "\u0394\u03B4 (ppm or Hz)",
+                    text: ylabel,
                     style: {'text-transform': 'none'}
                 },
                 labels: {
@@ -201,6 +209,8 @@ bindsim.sim_nmr_1to1 = {
         color_mf_h: "rgba(7, 52, 115, 0.4)",
         color_mf_hg: "rgba(18, 89, 187, 0.4)",
         color_dd: "rgba(255, 100, 3, 1)",
+        // Y axis label for plotting
+        ylabel: "\u0394\u03B4 (ppm or Hz)",
         // jQuery selector for 1to1 form
         form: "#params-nmr-1to1",
         $form: {}
@@ -340,7 +350,7 @@ bindsim.sim_nmr_1to1 = {
         }];
         
         // Call bindsim's global plot_setup with series parameters
-        return bindsim.plot_setup(series);
+        return bindsim.plot_setup(bindsim.sim_nmr_1to1.i.ylabel, series);
     }
 };
 
@@ -356,6 +366,8 @@ bindsim.sim_uv_1to1= {
         color_mf_h: "rgba(7, 52, 115, 0.4)",
         color_mf_hg: "rgba(18, 89, 187, 0.4)",
         color_dd: "rgba(255, 100, 3, 1)",
+        // Y axis label for plotting
+        ylabel: "Absorbance",
         // jQuery selector for 1to1 form
         form: "#params-uv-1to1",
         $form: {}
@@ -473,7 +485,7 @@ bindsim.sim_uv_1to1= {
         }];
         
         // Call bindsim's global plot_setup with series parameters
-        return bindsim.plot_setup(series);
+        return bindsim.plot_setup(bindsim.sim_uv_1to1.i.ylabel, series);
     }
 };
 
@@ -493,6 +505,8 @@ bindsim.sim_nmr_1to2 = {
         color_mf_hg: "rgba(90, 138, 205, 0.4)",
         color_mf_hg2: "rgba(18, 89, 187, 0.4)",
         color_dd: "rgba(255, 100, 3, 1)",
+        // Y axis label for plotting
+        ylabel: "\u0394\u03B4 (ppm or Hz)",
         // jQuery selector for 1to1 form
         form: "#params-nmr-1to2",
         $form: {}
@@ -623,7 +637,7 @@ bindsim.sim_nmr_1to2 = {
         }];
         
         // Call bindsim's global plot_setup with series parameters
-        return bindsim.plot_setup(series);
+        return bindsim.plot_setup(bindsim.sim_nmr_1to2.i.ylabel, series);
     }
 };
 
@@ -643,6 +657,8 @@ bindsim.sim_uv_1to2 = {
         color_mf_hg: "rgba(90, 138, 205, 0.4)",
         color_mf_hg2: "rgba(18, 89, 187, 0.4)",
         color_dd: "rgba(255, 100, 3, 1)",
+        // Y axis label for plotting
+        ylabel: "Absorbance",
         // jQuery selector for 1to1 form
         form: "#params-uv-1to2",
         $form: {}
@@ -773,7 +789,7 @@ bindsim.sim_uv_1to2 = {
         }];
         
         // Call bindsim's global plot_setup with series parameters
-        return bindsim.plot_setup(series);
+        return bindsim.plot_setup(bindsim.sim_uv_1to2.i.ylabel, series);
     }
 };
 
