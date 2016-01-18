@@ -725,13 +725,6 @@ bindsim.sim_uv_1to2 = {
         console.log("plot_update: Received returned points");
         console.log(points);
         
-        // Set appropriate extremes
-        var form = bindsim.sim_uv_1to2.i.form;
-        shifts = [parseFloat($(form+"-dh").val()), parseFloat($(form+"-dhg").val()), parseFloat($(form+"-dhg2").val())];
-        shift_min = Math.min.apply(Math, shifts);
-        shift_max = Math.max.apply(Math, shifts);
-        bindsim.chart.get(bindsim.i.axis_isotherm).setExtremes(shift_min, shift_max);
-
         // Plot new data
         bindsim.chart.get("series-molefrac-h")
             .setData(points[bindsim.sim_uv_1to2.i.json_mf_h], false);
@@ -781,7 +774,7 @@ bindsim.sim_uv_1to2 = {
             type: "line",
             yAxis: bindsim.i.axis_isotherm,
             tooltip: {
-                valueSuffix: " (ppm or Hz)"
+                valueSuffix: ""
             },
             lineWidth: 2,
             color: bindsim.sim_uv_1to2.i.color_dd,
@@ -984,7 +977,7 @@ bindsim.sim_uv_2to1 = {
         }
         bindsim.chart = bindsim.sim_uv_2to1.plot_setup();
 
-        // Bind/rebind click on plot button to 1:1 plot function
+        // Bind/rebind click on plot button to 2:1 plot function
         bindsim.i.$button.unbind("click");
         bindsim.i.$button.on("click", bindsim.sim_uv_2to1.plot);
 
@@ -1029,13 +1022,6 @@ bindsim.sim_uv_2to1 = {
         console.log("plot_update: Received returned points");
         console.log(points);
         
-        // Set appropriate extremes
-        var form = bindsim.sim_uv_2to1.i.form;
-        shifts = [parseFloat($(form+"-dh").val()), parseFloat($(form+"-dhg").val()), parseFloat($(form+"-d2hg").val())];
-        shift_min = Math.min.apply(Math, shifts);
-        shift_max = Math.max.apply(Math, shifts);
-        bindsim.chart.get(bindsim.i.axis_isotherm).setExtremes(shift_min, shift_max);
-
         // Plot new data
         bindsim.chart.get("series-molefrac-h")
             .setData(points[bindsim.sim_uv_2to1.i.json_mf_h], false);
@@ -1085,7 +1071,7 @@ bindsim.sim_uv_2to1 = {
             type: "line",
             yAxis: bindsim.i.axis_isotherm,
             tooltip: {
-                valueSuffix: " (ppm or Hz)"
+                valueSuffix: ""
             },
             lineWidth: 2,
             color: bindsim.sim_uv_2to1.i.color_dd,
