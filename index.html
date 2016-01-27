@@ -52,7 +52,7 @@
                             <h2 class="sr-only">Navigation</h2>
                             <ul class="nav navbar-nav">
                                 <li class="child first">
-                                    <a href="http://new.supramolecular.org/">
+                                    <a href="http://supramolecular.org/">
                                         <span>Back to Supramolecular Home</span>
                                     </a>
                                 </li>
@@ -75,14 +75,6 @@
                                 <li class="divider" role="presentation"><span class="sr-only">Separator</span></li>
                             </ul>
                         </nav>
-                        <ul class="nav nabar-nav navbar-right">
-                            <li>
-                                <a href="#" id="nav-logo-a">
-                                    <!-- <img src="/static/img/logo-cbns%40print.png" id="nav-logo" class="hidden-md hidden-sm hidden-xs"> -->
-                                    <img src="http://new.supramolecular.org/static/img/logo-cbns%40print.png" alt="" id="nav-logo" class="hidden-md hidden-sm hidden-xs">
-                                </a>
-                            </li>
-                        </ul>
                 </div> <!-- navbar-collapse -->
             </div> <!-- navbar -->
         </header>
@@ -90,7 +82,7 @@
         <!-- Page Content -->
         <div class="container-fluid">
             <div class="row">
-                <div id="control" class="col-xs-24 col-md-8"> 
+                <div id="control" class="col-xs-12 col-md-4"> 
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Control</h3>
@@ -98,8 +90,8 @@
                     <div class="panel-body">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <div class="col-xs-24">
-                                    <div class="col-xs-24">
+                                <div class="col-xs-12">
+                                    <div class="col-xs-12">
                                         <select id="selector" class="form-control">
                                             <option value="sim_nmr_1to1">NMR 1:1</option>
                                             <option value="sim_nmr_1to2">NMR 1:2</option>
@@ -115,32 +107,32 @@
 
                         <form id="params-nmr-1to1" class="form-horizontal">
                             <div class="form-group">
-                                <label for="params-nmr-1to1-k1" class="col-xs-6 control-label">K<sub>a</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to1-k1" class="col-xs-3 control-label">K<sub>a</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to1-k1" name="k1" type="number" class="form-control" value="1000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-nmr-1to1-h0_init" class="col-xs-6 control-label">[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to1-h0_init" class="col-xs-3 control-label">[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to1-h0_init" name="h0_init" type="number" class="form-control" value="0.001">
                                     <span class="input-group-addon input-group-addon-width">M (initial)</span>
                                 </div>
 
-                                <label for="params-nmr-1to1-g0h0_final" class="col-xs-6 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to1-g0h0_final" class="col-xs-3 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to1-g0h0_final" name="g0h0_final" type="number" class="form-control" value="20">
                                     <span class="input-group-addon input-group-addon-width">(max)</span>
                                 </div>
 
-                                <label for="params-nmr-1to1-dh" class="col-xs-6 control-label">&#948;<sub>H</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to1-dh" class="col-xs-3 control-label">&#948;<sub>H</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to1-dh" name="dh" type="number" class="form-control" value="8">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
 
-                                <label for="params-nmr-1to1-dhg" class="col-xs-6 control-label">&#948;<sub>HG</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to1-dhg" class="col-xs-3 control-label">&#948;<sub>HG</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to1-dhg" name="dhg" type="number" class="form-control" value="9">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
@@ -149,32 +141,32 @@
 
                         <form id="params-uv-1to1" class="form-horizontal">
                             <div class="form-group">
-                                <label for="params-uv-1to1-k1" class="col-xs-6 control-label">K<sub>a</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to1-k1" class="col-xs-3 control-label">K<sub>a</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to1-k1" name="k1" type="number" class="form-control" value="10000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-1to1-h0_init" class="col-xs-6 control-label">[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to1-h0_init" class="col-xs-3 control-label">[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to1-h0_init" name="h0_init" type="number" class="form-control" value="0.00001">
                                     <span class="input-group-addon input-group-addon-width">M (initial)</span>
                                 </div>
 
-                                <label for="params-uv-1to1-g0h0_final" class="col-xs-6 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to1-g0h0_final" class="col-xs-3 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to1-g0h0_final" name="g0h0_final" type="number" class="form-control" value="20">
                                     <span class="input-group-addon input-group-addon-width">(max)</span>
                                 </div>
 
-                                <label for="params-uv-1to1-dh" class="col-xs-6 control-label">&#949;<sub>H</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to1-dh" class="col-xs-3 control-label">&#949;<sub>H</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to1-dh" name="dh" type="number" class="form-control" value="30000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-1to1-dhg" class="col-xs-6 control-label">&#949;<sub>HG</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to1-dhg" class="col-xs-3 control-label">&#949;<sub>HG</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to1-dhg" name="dhg" type="number" class="form-control" value="20000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
@@ -183,44 +175,44 @@
 
                         <form id="params-nmr-1to2" class="form-horizontal">
                             <div class="form-group">
-                                <label for="params-nmr-1to2-k1" class="col-xs-6 control-label">K<sub>1</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to2-k1" class="col-xs-3 control-label">K<sub>1</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to2-k1" name="k1" type="number" class="form-control" value="10000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-nmr-1to2-k2" class="col-xs-6 control-label">K<sub>2</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to2-k2" class="col-xs-3 control-label">K<sub>2</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to2-k2" name="k2" type="number" class="form-control" value="1000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-nmr-1to2-h0_init" class="col-xs-6 control-label">[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to2-h0_init" class="col-xs-3 control-label">[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to2-h0_init" name="h0_init" type="number" class="form-control" value="0.001">
                                     <span class="input-group-addon input-group-addon-width">M</span>
                                 </div>
 
-                                <label for="params-nmr-1to2-g0h0_final" class="col-xs-6 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to2-g0h0_final" class="col-xs-3 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to2-g0h0_final" name="g0h0_final" type="number" class="form-control" value="20">
                                     <span class="input-group-addon input-group-addon-width"></span>
                                 </div>
 
-                                <label for="params-nmr-1to2-dh" class="col-xs-6 control-label">&#948;<sub>H</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to2-dh" class="col-xs-3 control-label">&#948;<sub>H</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to2-dh" name="dh" type="number" class="form-control" value="8">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
 
-                                <label for="params-nmr-1to2-dhg" class="col-xs-6 control-label">&#948;<sub>HG</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to2-dhg" class="col-xs-3 control-label">&#948;<sub>HG</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to2-dhg" name="dhg" type="number" class="form-control" value="7">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
 
-                                <label for="params-nmr-1to2-dhg2" class="col-xs-6 control-label">&#948;<sub>HG<sub>2</sub></sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-1to2-dhg2" class="col-xs-3 control-label">&#948;<sub>HG<sub>2</sub></sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-1to2-dhg2" name="dhg2" type="number" class="form-control" value="9">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
@@ -229,44 +221,44 @@
 
                         <form id="params-uv-1to2" class="form-horizontal">
                             <div class="form-group">
-                                <label for="params-uv-1to2-k1" class="col-xs-6 control-label">K<sub>1</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to2-k1" class="col-xs-3 control-label">K<sub>1</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to2-k1" name="k1" type="number" class="form-control" value="1000000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-1to2-k2" class="col-xs-6 control-label">K<sub>2</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to2-k2" class="col-xs-3 control-label">K<sub>2</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to2-k2" name="k2" type="number" class="form-control" value="100000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-1to2-h0_init" class="col-xs-6 control-label">[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to2-h0_init" class="col-xs-3 control-label">[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to2-h0_init" name="h0_init" type="number" class="form-control" value="0.00001">
                                     <span class="input-group-addon input-group-addon-width">M</span>
                                 </div>
 
-                                <label for="params-uv-1to2-g0h0_final" class="col-xs-6 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to2-g0h0_final" class="col-xs-3 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to2-g0h0_final" name="g0h0_final" type="number" class="form-control" value="20">
                                     <span class="input-group-addon input-group-addon-width"></span>
                                 </div>
 
-                                <label for="params-uv-1to2-dh" class="col-xs-6 control-label">&#949;<sub>H</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to2-dh" class="col-xs-3 control-label">&#949;<sub>H</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to2-dh" name="dh" type="number" class="form-control" value="20000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-1to2-dhg" class="col-xs-6 control-label">&#949;<sub>HG</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to2-dhg" class="col-xs-3 control-label">&#949;<sub>HG</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to2-dhg" name="dhg" type="number" class="form-control" value="10000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-1to2-dhg2" class="col-xs-6 control-label">&#949;<sub>HG<sub>2</sub></sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-1to2-dhg2" class="col-xs-3 control-label">&#949;<sub>HG<sub>2</sub></sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-1to2-dhg2" name="dhg2" type="number" class="form-control" value="50000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
@@ -275,44 +267,44 @@
 
                         <form id="params-nmr-2to1" class="form-horizontal">
                             <div class="form-group">
-                                <label for="params-nmr-2to1-k1" class="col-xs-6 control-label">K<sub>1</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-2to1-k1" class="col-xs-3 control-label">K<sub>1</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-2to1-k1" name="k1" type="number" class="form-control" value="10000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-nmr-2to1-k2" class="col-xs-6 control-label">K<sub>2</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-2to1-k2" class="col-xs-3 control-label">K<sub>2</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-2to1-k2" name="k2" type="number" class="form-control" value="5000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-nmr-2to1-h0_init" class="col-xs-6 control-label">[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-2to1-h0_init" class="col-xs-3 control-label">[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-2to1-h0_init" name="h0_init" type="number" class="form-control" value="0.001">
                                     <span class="input-group-addon input-group-addon-width">M</span>
                                 </div>
 
-                                <label for="params-nmr-2to1-g0h0_final" class="col-xs-6 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-2to1-g0h0_final" class="col-xs-3 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-2to1-g0h0_final" name="g0h0_final" type="number" class="form-control" value="20">
                                     <span class="input-group-addon input-group-addon-width"></span>
                                 </div>
 
-                                <label for="params-nmr-2to1-dh" class="col-xs-6 control-label">&#948;<sub>H</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-2to1-dh" class="col-xs-3 control-label">&#948;<sub>H</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-2to1-dh" name="dh" type="number" class="form-control" value="8">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
 
-                                <label for="params-nmr-2to1-dhg" class="col-xs-6 control-label">&#948;<sub>HG</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-2to1-dhg" class="col-xs-3 control-label">&#948;<sub>HG</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-2to1-dhg" name="dhg" type="number" class="form-control" value="7">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
 
-                                <label for="params-nmr-2to1-dh2g" class="col-xs-6 control-label">&#948;<sub>HG<sub>2</sub></sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-nmr-2to1-dh2g" class="col-xs-3 control-label">&#948;<sub>HG<sub>2</sub></sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-nmr-2to1-dh2g" name="dh2g" type="number" class="form-control" value="9">
                                     <span class="input-group-addon input-group-addon-width">ppm or Hz</span>
                                 </div>
@@ -321,44 +313,44 @@
 
                         <form id="params-uv-2to1" class="form-horizontal">
                             <div class="form-group">
-                                <label for="params-uv-2to1-k1" class="col-xs-6 control-label">K<sub>1</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-2to1-k1" class="col-xs-3 control-label">K<sub>1</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-2to1-k1" name="k1" type="number" class="form-control" value="1000000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-2to1-k2" class="col-xs-6 control-label">K<sub>2</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-2to1-k2" class="col-xs-3 control-label">K<sub>2</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-2to1-k2" name="k2" type="number" class="form-control" value="100000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-2to1-h0_init" class="col-xs-6 control-label">[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-2to1-h0_init" class="col-xs-3 control-label">[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-2to1-h0_init" name="h0_init" type="number" class="form-control" value="0.00001">
                                     <span class="input-group-addon input-group-addon-width">M</span>
                                 </div>
 
-                                <label for="params-uv-2to1-g0h0_final" class="col-xs-6 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-2to1-g0h0_final" class="col-xs-3 control-label">[G]<sub>0</sub>/[H]<sub>0</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-2to1-g0h0_final" name="g0h0_final" type="number" class="form-control" value="20">
                                     <span class="input-group-addon input-group-addon-width"></span>
                                 </div>
 
-                                <label for="params-uv-2to1-dh" class="col-xs-6 control-label">&#949;<sub>H</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-2to1-dh" class="col-xs-3 control-label">&#949;<sub>H</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-2to1-dh" name="dh" type="number" class="form-control" value="20000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-2to1-dhg" class="col-xs-6 control-label">&#949;<sub>HG</sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-2to1-dhg" class="col-xs-3 control-label">&#949;<sub>HG</sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-2to1-dhg" name="dhg" type="number" class="form-control" value="10000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
 
-                                <label for="params-uv-2to1-dh2g" class="col-xs-6 control-label">&#949;<sub>HG<sub>2</sub></sub></label>
-                                <div class="input-group col-xs-18">
+                                <label for="params-uv-2to1-dh2g" class="col-xs-3 control-label">&#949;<sub>HG<sub>2</sub></sub></label>
+                                <div class="input-group col-xs-9">
                                     <input id="params-uv-2to1-dh2g" name="dh2g" type="number" class="form-control" value="50000">
                                     <span class="input-group-addon input-group-addon-width">M<sup>-1</sup>cm<sup>-1</sup></span>
                                 </div>
@@ -381,10 +373,10 @@
                 </div> <!-- panel -->
                 </div> <!-- control -->
 
-                <div id="results" class="results col-xs-24 col-md-16">
+                <div id="results" class="results col-xs-12 col-md-8">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <div id="plot" class="col-xs-24">
+                            <div id="plot" class="col-xs-12">
                             </div> <!-- plot -->
                         </div> <!-- panel-body -->
                     </div> <!-- panel -->
