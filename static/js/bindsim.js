@@ -5,7 +5,7 @@ var bindsim = {
     // Bindsim internal globals
     i: {
         // Simulator backend root endpoint
-        endpoint: "http://api.supramolecular.org/bindsim/api",
+        endpoint: "https://api.supramolecular.org/bindsim/api",
         plot_id: "plot", // ID of plot container div
         axis_isotherm: "axis-isotherm",
         axis_molefrac: "axis-molefrac",
@@ -16,7 +16,7 @@ var bindsim = {
         $forms: {},
         $button: {}
     },
-         
+
     on_ready: function() {
         /**
          * Initialisation function, called on document ready
@@ -37,14 +37,14 @@ var bindsim = {
                 bindsim.i.$button.click();
             //}
         });
-        
+
         // Handle simulator selector dropdown
         $(bindsim.i.selector).on("change", bindsim.handle_selector);
     },
 
     handle_selector: function() {
         console.log("bindsim.handle_selector called");
-        
+
         // On selection change, run selected simulator's init function
         // (Dropdown selection value is set to the name of the simulator object)
         selection = $(this).val();
@@ -62,7 +62,7 @@ var bindsim = {
          * @param {callback} on_faile - Callback to execute on call failure, 
          *  passed backend response and request object
          */
-        
+
         var jqxhr = $.ajax({
             url: endpoint,
             type: "POST",
@@ -98,7 +98,7 @@ var bindsim = {
 
         var params = {};
         $params.serializeArray().map(function(x){params[x.name] = x.value;}); 
-        
+
         return params;
     },
 
@@ -121,7 +121,7 @@ var bindsim = {
 
     //
     // Highcharts
-    // 
+    //
     plot_setup: function(ylabel, s) {
         /**
          * Initialise a Highcharts chart in container #bindsim.i.plot_id
@@ -276,7 +276,7 @@ bindsim.sim_nmr_1to1 = {
         console.log("bindsim.sim_nmr_1to1.plot_update called");
         console.log("plot_update: Received returned points");
         console.log(points);
-        
+
         // Set appropriate extremes
         shift_min = parseFloat($(bindsim.sim_nmr_1to1.i.form+"-dh").val());
         shift_max = parseFloat($(bindsim.sim_nmr_1to1.i.form+"-dhg").val());
@@ -314,7 +314,7 @@ bindsim.sim_nmr_1to1 = {
 
     //
     // Highcharts
-    // 
+    //
     plot_setup: function() {
         /**
          * Initialise a Highcharts chart set up for the 1:1 simulator
@@ -348,7 +348,7 @@ bindsim.sim_nmr_1to1 = {
             color: bindsim.sim_nmr_1to1.i.color_dd,
             marker: {enabled: false}
         }];
-        
+
         // Call bindsim's global plot_setup with series parameters
         return bindsim.plot_setup(bindsim.sim_nmr_1to1.i.ylabel, series);
     }
@@ -483,7 +483,7 @@ bindsim.sim_uv_1to1= {
             color: bindsim.sim_uv_1to1.i.color_dd,
             marker: {enabled: false}
         }];
-        
+
         // Call bindsim's global plot_setup with series parameters
         return bindsim.plot_setup(bindsim.sim_uv_1to1.i.ylabel, series);
     }
@@ -635,7 +635,7 @@ bindsim.sim_nmr_1to2 = {
             color: bindsim.sim_nmr_1to2.i.color_dd,
             marker: {enabled: false}
         }];
-        
+
         // Call bindsim's global plot_setup with series parameters
         return bindsim.plot_setup(bindsim.sim_nmr_1to2.i.ylabel, series);
     }
@@ -724,7 +724,7 @@ bindsim.sim_uv_1to2 = {
         console.log("bindsim.sim_uv_1to2.plot_update called");
         console.log("plot_update: Received returned points");
         console.log(points);
-        
+
         // Plot new data
         bindsim.chart.get("series-molefrac-h")
             .setData(points[bindsim.sim_uv_1to2.i.json_mf_h], false);
@@ -739,7 +739,7 @@ bindsim.sim_uv_1to2 = {
 
     //
     // Highcharts
-    // 
+    //
     plot_setup: function() {
         /**
          * Initialise a Highcharts chart set up for the 1:1 simulator
@@ -780,7 +780,7 @@ bindsim.sim_uv_1to2 = {
             color: bindsim.sim_uv_1to2.i.color_dd,
             marker: {enabled: false}
         }];
-        
+
         // Call bindsim's global plot_setup with series parameters
         return bindsim.plot_setup(bindsim.sim_uv_1to2.i.ylabel, series);
     }
@@ -869,7 +869,7 @@ bindsim.sim_nmr_2to1 = {
         console.log("bindsim.sim_nmr_2to1.plot_update called");
         console.log("plot_update: Received returned points");
         console.log(points);
-        
+
         // Set appropriate extremes
         var form = bindsim.sim_nmr_2to1.i.form;
         shifts = [parseFloat($(form+"-dh").val()), parseFloat($(form+"-dhg").val()), parseFloat($(form+"-dh2g").val())];
@@ -891,7 +891,7 @@ bindsim.sim_nmr_2to1 = {
 
     //
     // Highcharts
-    // 
+    //
     plot_setup: function() {
         /**
          * Initialise a Highcharts chart set up for the 1:1 simulator
@@ -932,7 +932,7 @@ bindsim.sim_nmr_2to1 = {
             color: bindsim.sim_nmr_2to1.i.color_dd,
             marker: {enabled: false}
         }];
-        
+
         // Call bindsim's global plot_setup with series parameters
         return bindsim.plot_setup(bindsim.sim_nmr_2to1.i.ylabel, series);
     }
@@ -1021,7 +1021,7 @@ bindsim.sim_uv_2to1 = {
         console.log("bindsim.sim_uv_2to1.plot_update called");
         console.log("plot_update: Received returned points");
         console.log(points);
-        
+
         // Plot new data
         bindsim.chart.get("series-molefrac-h")
             .setData(points[bindsim.sim_uv_2to1.i.json_mf_h], false);
@@ -1036,7 +1036,7 @@ bindsim.sim_uv_2to1 = {
 
     //
     // Highcharts
-    // 
+    //
     plot_setup: function() {
         /**
          * Initialise a Highcharts chart set up for the 1:1 simulator
@@ -1077,13 +1077,11 @@ bindsim.sim_uv_2to1 = {
             color: bindsim.sim_uv_2to1.i.color_dd,
             marker: {enabled: false}
         }];
-        
+
         // Call bindsim's global plot_setup with series parameters
         return bindsim.plot_setup(bindsim.sim_uv_2to1.i.ylabel, series);
     }
 };
-
-
 
 
 $(document).ready(bindsim.on_ready);
